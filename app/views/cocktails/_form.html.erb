@@ -1,4 +1,10 @@
 <%= simple_form_for(@cocktail) do |f| %>
-    <%= f.input :name, placeholder: "Mojito" %>
-    <%= f.button :submit, class: "btn btn-primary"  %>
+  <%= f.input :name, placeholder: "Mojito" %>
+  <%= f.simple_fields_for :doses do |dose| %>
+    <%= render 'dose_fields', f: dose %>
+    <div class="links">
+      <%= link_to_add_association 'add dose', f, :doses %>
+    </div>
+  <% end %>
+  <%= f.button :submit, class: "btn btn-primary"  %>
 <% end %>

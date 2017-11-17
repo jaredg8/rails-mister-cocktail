@@ -1,9 +1,4 @@
 <%= simple_form_for(@cocktail) do |f| %>
-<%= f.error_notification %>
-
-<%= f.input :name, label: "Enter Cocktail Name"%>
-
-<%= f.button :submit %>
+    <%= f.input :name, placeholder: "Mojito" %>
+    <%= f.button :submit, class: "btn btn-primary"  %>
 <% end %>
-
-

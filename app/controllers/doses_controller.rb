@@ -35,6 +35,6 @@ class DosesController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def dose_params
-      params.require(:dose).permit(:amount, :cocktail_id, :ingredient_id)
+      params.require(:dose).permit(:description, :cocktail_id, :ingredient_id)
     end
 end

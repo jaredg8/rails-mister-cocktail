@@ -3,6 +3,8 @@ class CocktailsController < ApplicationController
 
   # GET /cocktails
   def index
+    random_offset = rand(Cocktail.count)
+    @featured_cocktails = Cocktail.offset(random_offset).first(3)
     @cocktails = Cocktail.all
   end
 
@@ -53,6 +55,6 @@ class CocktailsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def cocktail_params
-      params.require(:cocktail).permit(:name, doses_attributes: [:id, :description, :_destroy])
+      params.require(:cocktail).permit(:name, :photo, :photo_cache, doses_attributes: [:id, :description, :_destroy])
     end
 end

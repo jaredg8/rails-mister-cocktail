@@ -1,7 +1,7 @@
 <div class="navbar-wagon">
   <!-- Logo -->
   <div class="top-left"> <%= link_to root_path, class: "navbar-wagon-brand" do %>
-    <%= image_tag "logo.png" %>
+    <%= image_tag "beer_goggles.png" %>
     <% end %>
   </div>
   <!-- Right Navigation -->
@@ -12,21 +12,6 @@
 
     <!-- Avatar with dropdown menu -->
     <div class="navbar-wagon-item">
-      <div class="dropdown">
-        <%= image_tag "http://placehold.it/30x30", class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
-        <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-          <li>
-            <%= link_to "#" do %>
-            <i class="fa fa-user"></i> <%= t(".profile", default: "Profile") %>
-            <% end %>
-          </li>
-          <li>
-            <%= link_to "#" do %>
-            <i class="fa fa-home"></i>  <%= t(".profile", default: "Home") %>
-            <% end %>
-          </li>
-        </ul>
-      </div>
     </div>
   </div>
 

@@ -10,9 +10,15 @@ require 'open-uri'
 require 'faker'
 
 25.times do
-  cocktail = Cocktail.create({name:Faker::RockBand.name})
+  cocktail = Cocktail.new({name:Faker::RockBand.name})
+  url = "http://www.seriouseats.com/images/2015/04/20150406-cocktails-primary-vicky-wasik-1.jpg"
+  cocktail.remote_photo_url = url
+  cocktail.save
 end
 
 50.times do
   ingredient = Ingredient.create({name:Faker::Food.ingredient})
 end
+
+
+
